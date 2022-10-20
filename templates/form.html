@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style/login.css">
+    <title>Login</title>
+    <script type="text/javascript" language="javascript" src="../static/js/login.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a style="font-weight: bolder; color: #1c3461;" href="{{url_for('home')}}">Vaccine - Fairness & Equity</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="{{url_for('form')}}">Get Vaccinated</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{url_for('info')}}">Vaccine Info</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <form action = "/result" method="POST">
+        <div class="form-group">
+            <label>Name</label>
+            <input name="fullname" type="text" class="form-control" placeholder="Please enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Race:</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="Race" required >
+                <option value="">-- Select Race --</option>
+                <option value="Asian">Asian</option>
+                <option value="Black">Black</option>
+                <option value="Hispanic">Hispanic</option>
+                <option value="White">White</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group"> <!--STATE-->
+            <label for="state">State:</label>
+            <select class="form-control" id="state" required name="state">
+                <option value="" selected="selected">-- Select State -- </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="county">County:</label>
+            <select class="form-control" id="county" required name="county"> <!--county-->
+                <option value="" selected="selected">-- Select County --</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-primary">Request</button>
+    </form>
+    <script>
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
+</body>
+</html>

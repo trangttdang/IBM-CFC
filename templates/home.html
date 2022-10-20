@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style/home.css" />
+    <title>Vaccine - Fairness and Equity</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a style="font-weight: bolder; color: #1c3461;" href="{{url_for('home')}}">Vaccine - Fairness & Equity</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" href="{{url_for('home')}}">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{url_for('form')}}">Get Vaccinated</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="{{url_for('info')}}">Vaccine Info</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="landing-page">
+            <img class="hero-image" src="../static/style/images/background.png">
+            <div class="about">
+                <img src="../static/style/images/logo.png">
+                <button onclick="document.getElementById('intro').scrollIntoView();">Explore our project</button>
+            </div>
+        </div>
+        
+    
+        <h2 id="intro">Background of this project</h2>
+        <p>
+            Bias in the distribution of public resource, especially vaccine, has long been a serious problem in different communities around the world.
+            However, not until the rollout of COVID-19 vaccine, which could be considered to be one of the most crucial plans in the year of 2020, do people
+            recognize the consequences of unfairness in giving vaccine doses to different groups of demographics. For example, data on vaccine distribution in January 2021
+            has shown that 
+        </p>
+        <p>
+            After the 2020 pandemic, a problem similar to the early rollout of COVID-19 Vaccine is happening again: bias in distribution.
+            <ul class="moredetail">
+                <li>In Colorado, while the White population only accounts for 45% of the cases, they take up to 73% in the vaccinated population <a class="note" href="https://cdphe.colorado.gov/diseases-a-to-z/monkeypox">(CDPHE, Colorado)</a></li>
+                <li>North Carolina: “And while 70% of cases are in Black men, Black North Carolinians are receiving less than a quarter of the vaccinations” <a class="note" href="https://www.ncdhhs.gov/media/17508/open">(NCDHHS, North Carolina)</a></li>
+                <li>And similar situations are happening in other states.</li>
+            </ul>
+        </p>
+
+        <hr>
+        <h2>Why do we have to tackle this problem?</h2>
+        <ul class="moredetail">
+            <li>The two examples of the bias in COVID-19 vaccine rollout in 2021 and the similar problem with Monkeypox vaccine distribution at the moment highlight the challenge in helping different groups of civilians (in terms of demographics, income status, etc.) gain equal access to a resource such as vaccine.</li>
+            <li>In the long term, not only can the bias in vaccine distribution cause a heavy loss of lives and and wealths among those from the underrepresented groups, but it can also have a significant impact on the local and global economy in many aspects as it has eliminated economic potentials that come from those who were affected. The effects of missing necessary vaccines on one’s health can potentially hinder that person’s ability to contribute to the economy.</li>
+        </ul>
+
+        <hr>
+        <h2>How can we solve the problem?</h2>
+        <ul class="moredetail">
+            <li>We aim to design an application that utilizes an algorithm from a published research paper which has been successfully tested both theoretically and experimentally. The main research that will be used is: <a class="source" href="#ref-1">[1]</a>.</li>
+            <li>By trying to match an incoming users with vaccine facilities near them in the “fairest” way possible, the algorithm can help different groups of demographics receive a fair share of vaccines proportional to a certain preset goal. </li>
+            <li>We also apply statistical methods on real time data from official websites to make reliable estimation for some inputs for the algorithm such as the expected users that will need to be served or the expected number of vaccines that will be administered.</li>
+            <li>Starting with Monkeypox (because it is on the rise), we can scale our product to support other vaccines such as COVID-19, Flu, etc.</li>
+        </ul>
+
+        <hr>
+        <h2>References</h2>
+        <ol>
+            <li id = "ref-1">Xu, P., & Xu, Y. (2022). Equity Promotion in Online Resource Allocation. <em>Proceedings of the AAAI Conference on Artificial Intelligence, 36</em>(9), 9962-9970.</li>
+        </ol>
+    </main>
+</body>
+</html>
