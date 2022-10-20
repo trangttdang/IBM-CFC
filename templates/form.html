@@ -10,7 +10,7 @@
     <header>
         <div class="container">
             <nav id="nav-bar">
-                <ul>
+                <ul style="list-style: none;">
                     <li>
                         <a style="font-weight: bolder; color: #1c3461;" href="{{url_for('home')}}">Vaccine - Fairness & Equity</a>
                     </li>
@@ -30,7 +30,7 @@
 
     <form action = "/result" method="POST">
         <div class="form-group">
-            <label>Name</label>
+            <label>Name:</label>
             <input name="fullname" type="text" class="form-control" placeholder="Please enter your full name" required>
         </div>
 
