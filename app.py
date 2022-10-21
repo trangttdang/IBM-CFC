@@ -56,8 +56,7 @@ def result():
             url="http://maps.google.com/maps?q="
             for i in address.split():
                 url = url + "+" +i
-            
-            print(url)
+                
             if (response['provider'] == "Unavailable"):
                 return render_template("noresult.html", message="Sorry, no provider is available to you at the moment. Please check back again later.")
             else:           
